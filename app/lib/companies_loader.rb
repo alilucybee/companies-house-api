@@ -9,19 +9,15 @@ class CompaniesLoader
     @companies_house_api = ENV['COMPANIES_HOUSE_API']
   end
 
-  def setup
-    companies = fetch_companies
-    create_companies(companies)
-  end
-
-  def fetch_companies
-    response = HTTParty.get(companies_url)
-    return [] if response.code != 200
-    JSON.parse(response.body)
-  end
-
   def companies_house_url(registration_number)
     "#{companies_house_api}#{registration_number}"
+  end
+
+  def setup
+    companies_response = HTTParty.get(companies_url)
+    return [] if companies_response.code != 200
+    companies_data = JSON.parse(companies_response.body)
+    create_companies(companies_data)
   end
 
   def create_companies(companies)

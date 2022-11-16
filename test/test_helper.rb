@@ -4,6 +4,7 @@ ENV['COMPANIES_URL'] = 'http://www.example.com/'
 ENV['COMPANIES_HOUSE_API'] = 'http://www.example.com/company/'
 require_relative "../config/environment"
 require "rails/test_help"
+require "webmock/minitest"
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
