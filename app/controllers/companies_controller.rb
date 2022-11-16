@@ -36,7 +36,6 @@ class CompaniesController < ApplicationController
   end
 
   def fetch_companies
-    return if Rails.env.test?
     latest_companies = CompaniesLoader.new
     latest_companies.setup
   end
