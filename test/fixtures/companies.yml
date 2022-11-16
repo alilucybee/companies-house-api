@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: ACME
+  number: '12345678'
+  liked: false
+  address: 1 Appletree Road, Edinburgh, EH1 1PE
+
+two:
+  name: Fantastic Company
+  number: SC653213
+  liked: true
+  address: 45 Office Block, Suite 3, Glasgow

@@ -1,6 +1,5 @@
     <%= javascript_pack_tag 'companies_list' %>
     
     <div id="home-page">
-      {{message}}
       <companies-list :companies="<%= @companies.to_json %>"></companies-list>
     </div>

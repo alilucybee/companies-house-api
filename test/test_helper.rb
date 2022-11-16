@@ -1,4 +1,7 @@
 ENV['RAILS_ENV'] ||= 'test'
+ENV['API_KEY'] = '123'
+ENV['COMPANIES_URL'] = 'http://www.example.com/'
+ENV['COMPANIES_HOUSE_API'] = 'http://www.example.com/company/'
 require_relative "../config/environment"
 require "rails/test_help"
 
